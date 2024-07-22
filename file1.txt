@@ -1,6 +1,14 @@
-def HelloWorld(a):
-    print(a)
-
-HelloWorld("print")
-
-print("Hello World")
+space = ' '
+pos = 0
+status = 'i'
+while True:
+    if pos == 40:
+        status = 'd'
+    elif pos == 1:
+        status = 'i'
+    if status == 'i':
+        print(space * pos, "*")
+        pos += 1
+    elif status == 'd':
+        print(space * (pos - 1), "*")
+        pos -= 1
